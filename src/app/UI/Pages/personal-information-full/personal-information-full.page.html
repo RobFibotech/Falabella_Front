@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <div id="container">
     <div class="d-flex justify-content-start">
-      <img src="assets/img/sodimac_logo.png" height="30px" width="100px" />
+      <img src="assets/img/sodimac_logo.png" [routerLink]="['/home']" height="30px" width="100px" />
     </div>
 
     <div class="centrro pt-5 ">
@@ -87,7 +87,7 @@
 
 
     <div>
-      <ion-button (click)="prueba()"  expand="block" color="dark" fill="solid" >CONTINUAR</ion-button>
+      <ion-button [routerLink]="['/curp']"  expand="block" color="dark" fill="solid" >CONTINUAR</ion-button>
     </div>
 
 
