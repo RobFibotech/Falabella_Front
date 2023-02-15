@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="d-flex justify-content-start">
+      <img src="assets/img/sodimac_logo.png" height="30px" width="100px" />
+    </div>
+
+    <div class="centrro pt-5 ">
+      <a [routerLink]="['/authorization']"><ion-icon name="chevron-back" color="dark"></ion-icon><ion-label color="dark"
+          position="stacked">Regresar</ion-label></a>
+    </div>
+
+    <div class="d-flex justify-content-center pt-3">
+      <h2><b>Autorizaci&oacute;n</b></h2>
+    </div>
+
+
+    <ion-grid >
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <p>Ingresa el c&oacute;digo (NIP) que hemos enviado por SMS al n&uacute;mero: +52 00-0000-000</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">C&oacute;digo (NIP)*</ion-label>
+            <ion-input [clearInput]="true" type="text" maxlength="10" required="true"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <p>Al ingresar el c&oacute;digo (NIP) que te enviamos, autorizas la Consulta de tu Historial Crediticio a favor de Servicios Financieros Soriana</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <div class="pb-3">
+      <ion-button [routerLink]="['/user-registered']" expand="block" color="dark" fill="solid">ACEPTAR</ion-button>
+    </div>
+
+    <p><b>¿No recibiste el c&oacute;digo?</b></p>
+
+    <div>
+      <ion-button [routerLink]="['/autorization-validate']" expand="block" color="dark" fill="solid">Enviar C&oacute;digo de nuevo</ion-button>
+    </div>
+
+  </div>
+</ion-content>

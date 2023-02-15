@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="d-flex justify-content-start">
+      <img src="assets/img/sodimac_logo.png" height="30px" width="100px" />
+    </div>
+
+    <div class="centrro pt-5 ">
+      <a [routerLink]="['/domicilio']"><ion-icon name="chevron-back" color="dark"></ion-icon><ion-label color="dark"
+          position="stacked">Regresar</ion-label></a>
+    </div>
+
+    <div class="d-flex justify-content-center pt-3">
+      <h2><b>Autorizaci&oacute;n</b></h2>
+    </div>
+
+
+    <ion-grid >
+      <ion-row class="ion-justify-content-start">
+        <ion-col size="auto">
+          <ion-item lines="none">
+            <ion-toggle slot="start" color="dark"></ion-toggle>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item lines="none">
+            <p>Acepto y autorizo la consulta de mi Historial Crediticio a favor de Servicios Financieros Soriana.
+            <ion-label class="textfocus">Ver Mas</ion-label></p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <p>Enviaremos un c&oacute;digo (NIP) via SMS a tu celular: +52 00-0000-000</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+     
+    </ion-grid>
+    <div>
+      <ion-button [routerLink]="['/autorization-validate']" expand="block" color="dark" fill="solid">Enviar C&oacute;digo</ion-button>
+    </div>
+
+  </div>
+</ion-content>

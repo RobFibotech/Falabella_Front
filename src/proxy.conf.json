@@ -1,0 +1,8 @@
+{
+    "target": "https://nufi.azure-api.net/",
+    "secure": false,
+    "changeOrigin": true,
+    "headers": {
+        "Access-Control-Allow-Origin": "*"
+    }
+}
