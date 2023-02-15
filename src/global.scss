@@ -31,9 +31,46 @@ ion-content {
     --ion-text-color: #000;
 }
 
-ion-input {
-    --ion-background-color: white;
-    --ion-text-color: #000;
+ion-item {
+    --background: #fff;
+    --ion-text-color: #929292;
+}
+
+ion-button {
+    --background: black;
+    --ion-text-color: white;
+}
+
+ion-popover {
+    --background: rgba(40, 173, 218, 0.6);
+    --backdrop-opacity: 0.6;
+    --box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+    --color: white;
+    --width: 300px;
+}
+
+ion-popover ion-content {
+    --background: rgba(40, 173, 218, 0.6);
+}
+
+ion-toggle {
+    --background: #ddd;
+    --background-checked: #ddd;
+    --handle-background: black;
+    --handle-background-checked: #0d0d0d;
+}
+
+ion-toggle::part(track),
+ion-toggle.toggle-checked::part(track) {
+    background: #ddd;
+}
+
+ion-toggle::part(handle) {
+    background: gray;
+}
+
+ion-toggle.toggle-checked::part(handle) {
+    background: black;
 }
 
 #container {
@@ -50,7 +87,7 @@ ion-input {
     font-style: normal;
 }
 
-#container span{
+#container span {
     font-size: 10px;
     color: gray;
     font-style: normal;
@@ -63,7 +100,7 @@ ion-input {
 
 #container a {
     font-size: 17px;
-    color: gray;
+    color: black;
     font-style: normal;
 }
 
@@ -83,20 +120,21 @@ a:active {
     text-decoration: none;
 }
 
-.centrro{
+.centrro {
     display: flex;
     justify-content: start;
 }
 
-label,input{
-    display:flex;
-    flex-direction:column;
-  }
+label,
+input {
+    display: flex;
+    flex-direction: column;
+}
 
-.ine-image{
+.ine-image {
     font-size: 20ex;
 }
 
-.textfocus{
-    color:steelblue !important;
+.textfocus {
+    color: steelblue !important;
 }

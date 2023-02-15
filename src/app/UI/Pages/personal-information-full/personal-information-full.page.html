@@ -5,13 +5,10 @@
     </div>
 
     <div class="centrro pt-5 ">
-      <a [routerLink]="['/personal-information']"><ion-icon name="chevron-back" color="dark"></ion-icon><ion-label color="dark"
+      <a [routerLink]="['/personal-information']"><ion-icon name="chevron-back"></ion-icon><ion-label
           position="stacked">Regresar</ion-label></a>
     </div>
 
-    <div class="d-flex justify-content-center pt-3">
-      <h2><b>Informaci&oacute;n personal</b></h2>
-    </div>
 
     <div class="d-flex justify-content-center pt-2">
       <p>Ayudanos a completar tu informaci&oacute;n personal para verificar tu cuenta</p>
@@ -20,9 +17,9 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-item>
-            <ion-label position="floating">Nombres(s) *</ion-label>
-            <ion-input [clearInput]="true" type="text" maxlength="10" required="true"></ion-input>
+          <ion-item class="custom">
+            <ion-label  position="floating">Nombres(s) *</ion-label>
+            <ion-input  [clearInput]="true" type="text" maxlength="10" required="true"></ion-input>
             <ion-note slot="error">campo requerido</ion-note>
           </ion-item>
         </ion-col>
@@ -87,7 +84,7 @@
 
 
     <div>
-      <ion-button [routerLink]="['/curp']"  expand="block" color="dark" fill="solid" >CONTINUAR</ion-button>
+      <ion-button [routerLink]="['/curp']"  expand="block"  fill="solid" >CONTINUAR</ion-button>
     </div>
 
 
