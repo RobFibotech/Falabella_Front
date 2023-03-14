@@ -20,8 +20,6 @@ export class PersonalInformationFullPage implements OnInit {
   ngOnInit() {
   }
 
-
-
   calculateCurp()
   {
 
@@ -34,6 +32,18 @@ export class PersonalInformationFullPage implements OnInit {
     this.curpModel.segundo_apellido="SANCHEZ";
     this.curpModel.anio_nacimiento="1976";
     this.curpModel.sexo="H";
+    const curpModelMap = {
+      "tipo_busqueda": this.curpModel.tipo_busqueda,
+      "clave_entidad": this.curpModel.clave_entidad,
+      "dia_nacimiento": this.curpModel.dia_nacimiento,
+      "mes_nacimiento": this.curpModel.mes_nacimiento,
+      "nombres": this.curpModel.nombres,
+      "primer_apellido": this.curpModel.primer_apellido,
+      "segundo_apellido": this.curpModel.segundo_apellido,
+      "anio_nacimiento": this.curpModel.anio_nacimiento,
+      "sexo": this.curpModel.sexo,
+    };
+    localStorage.setItem("curpModel", JSON.stringify(curpModelMap))
     this.requestApi = this.apiSvc.getCURP(this.curpModel)
       .subscribe((res: any) => {
         this.responseApi = res.data;

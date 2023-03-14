@@ -5,7 +5,7 @@
     </div>
 
     <div class="centrro pt-5 ">
-      <a [routerLink]="['/ine-front-validate']"><ion-icon name="chevron-back" ></ion-icon><ion-label 
+      <a [routerLink]="['/ine-front-validate']"><ion-icon name="chevron-back" ></ion-icon><ion-label
           position="stacked">Regresar</ion-label></a>
     </div>
 
@@ -15,8 +15,17 @@
     </div>
 
     <div class="d-flex justify-content-center pt-3">
-      <h2><b>Toma una foto de la parte de 
+      <h2><b>Toma una foto de la parte de
         <ion-label class="textfocus">atras</ion-label> de tu INE</b></h2>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center pt-3">
+      <div class="form-group">
+        <label for="file">Elige una imagen</label>
+        <input type="file"
+               id="file"
+               (change)="handleFileInput($event)">
+      </div>
     </div>
 
     <div class="pt-2">

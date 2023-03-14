@@ -1,6 +1,7 @@
 export interface iCurp
 {
     tipo_busqueda:string,
+    curp:string,
     clave_entidad:string,
     dia_nacimiento:string,
     mes_nacimiento:string,
@@ -13,6 +14,7 @@ export interface iCurp
 
 export class Curp implements iCurp {
     tipo_busqueda: string;
+    curp: string;
     clave_entidad: string;
     dia_nacimiento: string;
     mes_nacimiento: string;
@@ -25,6 +27,7 @@ export class Curp implements iCurp {
     constructor()
     {
         this.tipo_busqueda='';
+        this.curp='';
         this.clave_entidad='';
         this.dia_nacimiento='';
         this.mes_nacimiento='';

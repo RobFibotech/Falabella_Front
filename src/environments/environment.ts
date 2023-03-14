@@ -9,7 +9,7 @@ export const environment = {
   serverUrl: '/api',
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US'],
-  Api_Endpoint: 'https://nufi.azure-api.net/',
+  Api_Endpoint: 'http://localhost:3000/api/v1/nufi/',
   key_nufi_azure:'NUFI-API-KEY',
   value_nufi_azure:'fc0aa6c274f04f2c8643f1752d0c12b5'
 };

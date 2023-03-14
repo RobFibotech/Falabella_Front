@@ -25,18 +25,38 @@ export class ApiService {
       'X-Requested-With': 'XMLHttpRequest',
       'Access-Control-Allow-Credentials':'true',
       'Access-Control-Allow-Methods': 'GET,POST,DELETE,PUT,HEAD',
-      'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',      
+      'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
     });
 
     this.options = { headers: this.headers };
   }
 
-  getCURP(dataRequest:Curp):Observable<any>{
+  public getCURP(dataRequest:Curp):Observable<any>{
     this.setHeaders();
-    return this.httpClient.post(this.apiUrl + "Curp/v1/consulta",dataRequest, this.options);
+    return this.httpClient.post(this.apiUrl + "consultacurp",dataRequest, this.options);
   }
 
-  getPrueba(rfc:string):Observable<any>{
+  public  getConsultaINEFrente(dataRequest:any):Observable<any>{
+    this.setHeaders();
+    return this.httpClient.post(this.apiUrl + "consultainefrente",dataRequest, this.options);
+  }
+
+  public  getConsultaINEReverso(dataRequest:any):Observable<any>{
+    this.setHeaders();
+    return this.httpClient.post(this.apiUrl + "consultainereverso",dataRequest, this.options);
+  }
+
+  public enviarContrasena(dataRequest:any):Observable<any>{
+    this.setHeaders();
+    return this.httpClient.post(this.apiUrl + "enviarcontrasena",dataRequest, this.options);
+  }
+
+  public validarContrasena(dataRequest:any):Observable<any>{
+    this.setHeaders();
+    return this.httpClient.post(this.apiUrl + "validarcontrasena",dataRequest, this.options);
+  }
+
+  public getPrueba(rfc:string):Observable<any>{
     this.setHeaders();
     return this.httpClient.post(this.apiUrl + "certificadosat/v1/consultar/consultar",rfc, this.options);
   }

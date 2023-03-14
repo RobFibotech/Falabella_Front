@@ -1,0 +1,49 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "android": {
+      "name": "android",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "platforms": {
+      "name": "platforms",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "plugins": {
+      "name": "plugins",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "resources": {
+      "name": "resources",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "src": {
+      "name": "src",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "typings": {
+      "name": "typings",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "www": {
+      "name": "www",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    }
+  },
+  "files": {}
+}

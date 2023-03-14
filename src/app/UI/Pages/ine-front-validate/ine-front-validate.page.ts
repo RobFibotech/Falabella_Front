@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {WebcamImage} from 'ngx-webcam';
 import {Subject, Observable} from 'rxjs';
+import { ApiService } from './../../../Infraestructure/services/api.service';
+
 
 @Component({
   selector: 'app-ine-front-validate',
@@ -11,22 +13,24 @@ export class IneFrontValidatePage implements OnInit {
 
  ngOnInit(): void {
  }
+  constructor(
+    private apiSvc: ApiService
+  ) { }
 
- // latest snapshot
- public webcamImage: WebcamImage | undefined;
-
- // webcam snapshot trigger
- private trigger: Subject<void> = new Subject<void>();
- triggerSnapshot(): void {
-  this.trigger.next();
- }
- handleImage(webcamImage:WebcamImage): void {
-  console.info('received webcam image', webcamImage);
-  this.webcamImage = webcamImage;
- }
-
- public get triggerObservable(): Observable<void> {
-  return this.trigger.asObservable();
- }
+//Mandar data
+public sendINEFront()
+{
+  this.sendImageIneFront().then((result: Observable<any>) => {
+    console.log('INE front result', result);
+  });
+}
+public async sendImageIneFront(): Promise<Observable<any>> {
+  const b64Image = localStorage.getItem("ineFront");
+  console.log('b64Image', b64Image)
+  const request = {
+    "b64CredencialFrente":  b64Image
+  };
+  return this.apiSvc.getConsultaINEFrente(request);
+}
 
 }
